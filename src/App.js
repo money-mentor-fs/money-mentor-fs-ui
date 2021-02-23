@@ -12,7 +12,7 @@ const LoggedOutComponent = lazy(() => import("./logged_out/components/Main"));
 
 function App({ basename }) {
   return (
-    <HashRouter basename={basename}>
+    <HashRouter>
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <GlobalStyles />

@@ -68,7 +68,7 @@ function NavBar(props) {
             <img
               src={toAbsoluteUrl("/images/Money_Mentor_Small.jpg")}
               alt={"Money Mentor Fs Logo"}
-              style={{ height: "13vh", width: "12vw" }}
+              style={{ height: "75px", width: "100px" }}
             />
           )}
           {!isImage && (

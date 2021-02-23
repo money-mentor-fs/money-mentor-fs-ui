@@ -137,16 +137,6 @@ function HeadSection(props) {
                             elitr, sed diam nonumy eirmod tempor invidunt
                           </Typography>
                         </Box>
-                        <Button
-                          variant="contained"
-                          color="secondary"
-                          fullWidth
-                          className={classes.extraLargeButton}
-                          classes={{ label: classes.extraLargeButtonLabel }}
-                          href="https://github.com/dunky11/react-saas-template"
-                        >
-                          Download from GitHub
-                        </Button>
                       </div>
                     </Box>
                   </Grid>
