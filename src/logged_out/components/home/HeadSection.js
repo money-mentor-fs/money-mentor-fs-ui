@@ -2,17 +2,17 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import {
-  Grid,
-  Typography,
-  Card,
-  Button,
-  Hidden,
   Box,
+  Card,
+  Grid,
+  Hidden,
+  isWidthUp,
+  Typography,
   withStyles,
   withWidth,
-  isWidthUp,
 } from "@material-ui/core";
 import WaveBorder from "../../../shared/components/WaveBorder";
+import { appConfig } from "../../../app/configs/appConfigs";
 import ZoomImage from "../../../shared/components/ZoomImage";
 
 const styles = (theme) => ({
@@ -66,7 +66,8 @@ const styles = (theme) => ({
   },
   wrapper: {
     position: "relative",
-    backgroundColor: theme.palette.secondary.main,
+    // backgroundColor: "#91afdc",
+    backgroundColor: "#3b77a1",
     paddingBottom: theme.spacing(2),
   },
   image: {
@@ -123,8 +124,10 @@ function HeadSection(props) {
                         <Typography
                           variant={isWidthUp("lg", width) ? "h3" : "h4"}
                         >
-                          Free Template for building a SaaS app using
-                          Material-UI
+                          {appConfig.appName}
+                        </Typography>
+                        <Typography variant={"h5"}>
+                          One stop Solution for all your financial needs!
                         </Typography>
                       </Box>
                       <div>
@@ -133,8 +136,27 @@ function HeadSection(props) {
                             variant={isWidthUp("lg", width) ? "h6" : "body1"}
                             color="textSecondary"
                           >
-                            Lorem ipsum dolor sit amet, consetetur sadipscing
-                            elitr, sed diam nonumy eirmod tempor invidunt
+                            We at {appConfig.appName} Finserv LLP with our
+                            expertise in financial domain along with execution
+                            capabilities operate as an independent advisor to
+                            Mid size and Emerging corporates by developing and
+                            executing customised solutions to achieve their
+                            financial objectives.
+                          </Typography>
+                          <br />
+                          <Typography
+                            variant={isWidthUp("lg", width) ? "h6" : "body1"}
+                            color="textSecondary"
+                          >
+                            Mission and Vision
+                            <ul>
+                              <li>
+                                Committed to High-quality Financial Solutions
+                              </li>
+                              <li>
+                                Customer satisfaction is our most priority
+                              </li>
+                            </ul>
                           </Typography>
                         </Box>
                       </div>
@@ -143,7 +165,7 @@ function HeadSection(props) {
                   <Hidden smDown>
                     <Grid item md={6}>
                       <ZoomImage
-                        src={`${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg`}
+                        src={`${process.env.PUBLIC_URL}/images/T-finance-photo-2.jpeg`}
                         className={classes.image}
                         alt="header example"
                       />
@@ -156,7 +178,8 @@ function HeadSection(props) {
         </div>
       </div>
       <WaveBorder
-        upperColor={theme.palette.secondary.main}
+        // upperColor={"#6784b3"}
+        upperColor={"#476d70"}
         lowerColor="#FFFFFF"
         className={classes.waveBorder}
         animationNegativeDelay={2}

@@ -1,19 +1,11 @@
-import React, { memo } from "react";
+import React, {memo} from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import {
-  AppBar,
-  Button,
-  Hidden,
-  IconButton,
-  Toolbar,
-  Typography,
-  withStyles,
-} from "@material-ui/core";
+import {Link} from "react-router-dom";
+import {AppBar, Button, Hidden, IconButton, Toolbar, Typography, withStyles,} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
-import { toAbsoluteUrl } from "../../../app/utils/UtilMethods";
+import {toAbsoluteUrl} from "../../../app/utils/UtilMethods";
 
 const styles = (theme) => ({
   appBar: {
@@ -54,11 +46,14 @@ function NavBar(props) {
       name: "Home",
       icon: <HomeIcon className="text-white" />,
     },
-    {
-      link: "/home",
-      name: "Home 2",
-      icon: <HomeIcon className="text-white" />,
-    },
+    // { link: "/home", name: "About Us" },
+    // { link: "/home", name: "Services" },
+    // { link: "/home", name: "Contact Us" },
+    // {
+    //   link: "/home",
+    //   name: "Home 2",
+    //   icon: <HomeIcon className="text-white" />,
+    // },
   ];
   return (
     <div className={classes.root}>
@@ -68,7 +63,7 @@ function NavBar(props) {
             <img
               src={toAbsoluteUrl("/images/Money_Mentor_Small.jpg")}
               alt={"Money Mentor Fs Logo"}
-              style={{ height: "75px", width: "100px" }}
+              style={{ height: "75px", width: "120px" }}
             />
           )}
           {!isImage && (

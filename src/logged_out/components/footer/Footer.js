@@ -1,25 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  Grid,
-  Typography,
-  Box,
-  IconButton,
-  Hidden,
-  withStyles,
-  withWidth,
-  isWidthUp,
-  TextField
-} from "@material-ui/core";
-import PhoneIcon from "@material-ui/icons/Phone";
+import {Box, Grid, Hidden, IconButton, isWidthUp, Typography, withStyles, withWidth,} from "@material-ui/core";
 import MailIcon from "@material-ui/icons/Mail";
 import WaveBorder from "../../../shared/components/WaveBorder";
 import transitions from "@material-ui/core/styles/transitions";
-import ColoredButton from "../../../shared/components/ColoredButton";
+import {appConfig} from "../../../app/configs/appConfigs";
+import {Link} from "react-router-dom";
 
-const styles = theme => ({
+const styles = (theme) => ({
   footerInner: {
-    backgroundColor: theme.palette.common.darkBlack,
+    backgroundColor: "#476d70",
     paddingTop: theme.spacing(8),
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
@@ -28,62 +18,62 @@ const styles = theme => ({
       paddingTop: theme.spacing(10),
       paddingLeft: theme.spacing(16),
       paddingRight: theme.spacing(16),
-      paddingBottom: theme.spacing(10)
+      paddingBottom: theme.spacing(10),
     },
     [theme.breakpoints.up("md")]: {
       paddingTop: theme.spacing(10),
       paddingLeft: theme.spacing(10),
       paddingRight: theme.spacing(10),
-      paddingBottom: theme.spacing(10)
-    }
+      paddingBottom: theme.spacing(10),
+    },
   },
   brandText: {
     fontFamily: "'Baloo Bhaijaan', cursive",
     fontWeight: 400,
-    color: theme.palette.common.white
+    color: theme.palette.common.white,
   },
   footerLinks: {
     marginTop: theme.spacing(2.5),
     marginBot: theme.spacing(1.5),
-    color: theme.palette.common.white
+    color: theme.palette.common.white,
   },
   infoIcon: {
     color: `${theme.palette.common.white} !important`,
-    backgroundColor: "#33383b !important"
+    backgroundColor: "#33383b !important",
   },
   socialIcon: {
     fill: theme.palette.common.white,
     backgroundColor: "#33383b",
     borderRadius: theme.shape.borderRadius,
     "&:hover": {
-      backgroundColor: theme.palette.primary.light
-    }
+      backgroundColor: theme.palette.primary.light,
+    },
   },
   link: {
     cursor: "Pointer",
     color: theme.palette.common.white,
     transition: transitions.create(["color"], {
       duration: theme.transitions.duration.shortest,
-      easing: theme.transitions.easing.easeIn
+      easing: theme.transitions.easing.easeIn,
     }),
     "&:hover": {
-      color: theme.palette.primary.light
-    }
+      color: theme.palette.primary.light,
+    },
   },
   whiteBg: {
-    backgroundColor: theme.palette.common.white
-  }
+    backgroundColor: theme.palette.common.white,
+  },
 });
 
 const infos = [
-  {
-    icon: <PhoneIcon />,
-    description: "+1 555 123456"
-  },
+  // {
+  //   icon: <PhoneIcon />,
+  //   description: "+1 555 123456",
+  // },
   {
     icon: <MailIcon />,
-    description: "support@company.com"
-  }
+    description: "credit@moneymentorfs.com",
+  },
 ];
 
 const socialIcons = [
@@ -101,7 +91,7 @@ const socialIcons = [
       </svg>
     ),
     label: "Github",
-    href: "https://github.com/dunky11/react-saas-template"
+    href: "https://github.com/dunky11/react-saas-template",
   },
   {
     icon: (
@@ -117,7 +107,7 @@ const socialIcons = [
       </svg>
     ),
     label: "Facebook",
-    href: "https://facebook.com"
+    href: "https://facebook.com",
   },
   {
     icon: (
@@ -133,7 +123,7 @@ const socialIcons = [
       </svg>
     ),
     label: "LinkedIn",
-    href: "https://www.linkedin.com/"
+    href: "https://www.linkedin.com/",
   },
   {
     icon: (
@@ -149,8 +139,8 @@ const socialIcons = [
       </svg>
     ),
     label: "Twitter",
-    href: "https://www.twitter.com/"
-  }
+    href: "https://www.twitter.com/",
+  },
 ];
 
 function Footer(props) {
@@ -159,37 +149,65 @@ function Footer(props) {
     <footer className="lg-p-top">
       <WaveBorder
         upperColor="#FFFFFF"
-        lowerColor={theme.palette.common.darkBlack}
+        lowerColor={"#3b77a1"}
         animationNegativeDelay={4}
       />
       <div className={classes.footerInner}>
         <Grid container spacing={isWidthUp("md", width) ? 10 : 5}>
           <Grid item xs={12} md={6} lg={4}>
-            <form>
-              <Box display="flex" flexDirection="column">
-                <Box mb={1}>
-                  <TextField
-                    variant="outlined"
-                    multiline
-                    placeholder="Get in touch with us"
-                    inputProps={{ "aria-label": "Get in Touch" }}
-                    InputProps={{
-                      className: classes.whiteBg
-                    }}
-                    rows={4}
-                    fullWidth
-                    required
-                  />
-                </Box>
-                <ColoredButton
-                  color={theme.palette.common.white}
-                  variant="outlined"
-                  type="submit"
-                >
-                  Send Message
-                </ColoredButton>
+            <Box display="flex" flexDirection="column">
+              <Box mb={1}>
+                <Typography variant="h6" paragraph className="text-white">
+                  Useful Links
+                </Typography>
               </Box>
-            </form>
+              <ul>
+                {[
+                  {
+                    label: "Home",
+                    url: "/home",
+                  },
+                ].map((commonValue, index) => {
+                  return (
+                    <li className="text-white">
+                      <Link to={commonValue.url} key={index}>
+                        <Typography
+                          style={{ color: "#8f9296" }}
+                          className="text-white"
+                        >
+                          {commonValue.label}
+                        </Typography>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </Box>
+            {/*<form>*/}
+            {/*  <Box display="flex" flexDirection="column">*/}
+            {/*    <Box mb={1}>*/}
+            {/*      <TextField*/}
+            {/*        variant="outlined"*/}
+            {/*        multiline*/}
+            {/*        placeholder="Get in touch with us"*/}
+            {/*        inputProps={{ "aria-label": "Get in Touch" }}*/}
+            {/*        InputProps={{*/}
+            {/*          className: classes.whiteBg*/}
+            {/*        }}*/}
+            {/*        rows={4}*/}
+            {/*        fullWidth*/}
+            {/*        required*/}
+            {/*      />*/}
+            {/*    </Box>*/}
+            {/*    <ColoredButton*/}
+            {/*      color={theme.palette.common.white}*/}
+            {/*      variant="outlined"*/}
+            {/*      type="submit"*/}
+            {/*    >*/}
+            {/*      Send Message*/}
+            {/*    </ColoredButton>*/}
+            {/*  </Box>*/}
+            {/*</form>*/}
           </Grid>
           <Hidden mdDown>
             <Grid item xs={12} md={6} lg={4}>
@@ -223,24 +241,35 @@ function Footer(props) {
           </Hidden>
           <Grid item xs={12} md={6} lg={4}>
             <Typography variant="h6" paragraph className="text-white">
-              About the Company
+              About Us
             </Typography>
-            <Typography style={{ color: "#8f9296" }} paragraph>
-              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-              euismod convallis velit, eu auctor lacus vehicula sit amet.
+            <Typography
+              style={{ color: "#8f9296" }}
+              paragraph
+              className="text-white"
+            >
+              We at {appConfig.appName} Finserv LLP with our expertise in
+              financial domain along with execution capabilities operate as an
+              independent advisor to Mid size and Emerging corporates by
+              developing and executing customised solutions to achieve their
+              financial objectives.
             </Typography>
             <Box display="flex">
-              {socialIcons.map((socialIcon, index) => (
-                <Box key={index} mr={index !== socialIcons.length - 1 ? 1 : 0}>
-                  <IconButton
-                    aria-label={socialIcon.label}
-                    className={classes.socialIcon}
-                    href={socialIcon.href}
+              {appConfig.isFooterSocialIconsEnable &&
+                socialIcons.map((socialIcon, index) => (
+                  <Box
+                    key={index}
+                    mr={index !== socialIcons.length - 1 ? 1 : 0}
                   >
-                    {socialIcon.icon}
-                  </IconButton>
-                </Box>
-              ))}
+                    <IconButton
+                      aria-label={socialIcon.label}
+                      className={classes.socialIcon}
+                      href={socialIcon.href}
+                    >
+                      {socialIcon.icon}
+                    </IconButton>
+                  </Box>
+                ))}
             </Box>
           </Grid>
         </Grid>
@@ -252,7 +281,7 @@ function Footer(props) {
 Footer.propTypes = {
   theme: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
-  width: PropTypes.string.isRequired
+  width: PropTypes.string.isRequired,
 };
 
 export default withWidth()(withStyles(styles, { withTheme: true })(Footer));
