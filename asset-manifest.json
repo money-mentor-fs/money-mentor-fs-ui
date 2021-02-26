@@ -1,31 +1,31 @@
 {
   "files": {
-    "main.css": "/money-mentor-fs-ui/static/css/main.a8223bf0.chunk.css",
-    "main.js": "/money-mentor-fs-ui/static/js/main.a187e268.chunk.js",
-    "main.js.map": "/money-mentor-fs-ui/static/js/main.a187e268.chunk.js.map",
-    "runtime-main.js": "/money-mentor-fs-ui/static/js/runtime-main.cfc41da9.js",
-    "runtime-main.js.map": "/money-mentor-fs-ui/static/js/runtime-main.cfc41da9.js.map",
-    "static/css/2.ec02d681.chunk.css": "/money-mentor-fs-ui/static/css/2.ec02d681.chunk.css",
-    "static/js/2.3cd7386a.chunk.js": "/money-mentor-fs-ui/static/js/2.3cd7386a.chunk.js",
-    "static/js/2.3cd7386a.chunk.js.map": "/money-mentor-fs-ui/static/js/2.3cd7386a.chunk.js.map",
-    "static/css/3.5c4e51bb.chunk.css": "/money-mentor-fs-ui/static/css/3.5c4e51bb.chunk.css",
-    "static/js/3.aa1b0f0d.chunk.js": "/money-mentor-fs-ui/static/js/3.aa1b0f0d.chunk.js",
-    "static/js/3.aa1b0f0d.chunk.js.map": "/money-mentor-fs-ui/static/js/3.aa1b0f0d.chunk.js.map",
-    "static/js/4.903866b9.chunk.js": "/money-mentor-fs-ui/static/js/4.903866b9.chunk.js",
-    "static/js/4.903866b9.chunk.js.map": "/money-mentor-fs-ui/static/js/4.903866b9.chunk.js.map",
-    "index.html": "/money-mentor-fs-ui/index.html",
-    "static/css/2.ec02d681.chunk.css.map": "/money-mentor-fs-ui/static/css/2.ec02d681.chunk.css.map",
-    "static/css/3.5c4e51bb.chunk.css.map": "/money-mentor-fs-ui/static/css/3.5c4e51bb.chunk.css.map",
-    "static/css/main.a8223bf0.chunk.css.map": "/money-mentor-fs-ui/static/css/main.a8223bf0.chunk.css.map",
-    "static/js/2.3cd7386a.chunk.js.LICENSE.txt": "/money-mentor-fs-ui/static/js/2.3cd7386a.chunk.js.LICENSE.txt",
-    "static/js/3.aa1b0f0d.chunk.js.LICENSE.txt": "/money-mentor-fs-ui/static/js/3.aa1b0f0d.chunk.js.LICENSE.txt",
-    "static/js/main.a187e268.chunk.js.LICENSE.txt": "/money-mentor-fs-ui/static/js/main.a187e268.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.a8223bf0.chunk.css",
+    "main.js": "/static/js/main.e738e3a8.chunk.js",
+    "main.js.map": "/static/js/main.e738e3a8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.cb827430.js",
+    "runtime-main.js.map": "/static/js/runtime-main.cb827430.js.map",
+    "static/css/2.ec02d681.chunk.css": "/static/css/2.ec02d681.chunk.css",
+    "static/js/2.3cd7386a.chunk.js": "/static/js/2.3cd7386a.chunk.js",
+    "static/js/2.3cd7386a.chunk.js.map": "/static/js/2.3cd7386a.chunk.js.map",
+    "static/css/3.5c4e51bb.chunk.css": "/static/css/3.5c4e51bb.chunk.css",
+    "static/js/3.aa1b0f0d.chunk.js": "/static/js/3.aa1b0f0d.chunk.js",
+    "static/js/3.aa1b0f0d.chunk.js.map": "/static/js/3.aa1b0f0d.chunk.js.map",
+    "static/js/4.f80e75b7.chunk.js": "/static/js/4.f80e75b7.chunk.js",
+    "static/js/4.f80e75b7.chunk.js.map": "/static/js/4.f80e75b7.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.ec02d681.chunk.css.map": "/static/css/2.ec02d681.chunk.css.map",
+    "static/css/3.5c4e51bb.chunk.css.map": "/static/css/3.5c4e51bb.chunk.css.map",
+    "static/css/main.a8223bf0.chunk.css.map": "/static/css/main.a8223bf0.chunk.css.map",
+    "static/js/2.3cd7386a.chunk.js.LICENSE.txt": "/static/js/2.3cd7386a.chunk.js.LICENSE.txt",
+    "static/js/3.aa1b0f0d.chunk.js.LICENSE.txt": "/static/js/3.aa1b0f0d.chunk.js.LICENSE.txt",
+    "static/js/main.e738e3a8.chunk.js.LICENSE.txt": "/static/js/main.e738e3a8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.cfc41da9.js",
+    "static/js/runtime-main.cb827430.js",
     "static/css/3.5c4e51bb.chunk.css",
     "static/js/3.aa1b0f0d.chunk.js",
     "static/css/main.a8223bf0.chunk.css",
-    "static/js/main.a187e268.chunk.js"
+    "static/js/main.e738e3a8.chunk.js"
   ]
 }
