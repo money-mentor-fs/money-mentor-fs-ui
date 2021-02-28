@@ -5,7 +5,6 @@ import {
   Box,
   Card,
   Grid,
-  Hidden,
   isWidthUp,
   Typography,
   withStyles,
@@ -121,13 +120,14 @@ function HeadSection(props) {
                       height="100%"
                     >
                       <Box mb={4}>
-                        <Typography
-                          variant={isWidthUp("lg", width) ? "h3" : "h4"}
-                        >
-                          {appConfig.appName}
-                        </Typography>
+                        {/*<Typography*/}
+                        {/*  variant={isWidthUp("lg", width) ? "h3" : "h4"}*/}
+                        {/*>*/}
+                        {/*  {appConfig.appName}*/}
+                        {/*</Typography>*/}
                         <Typography variant={"h5"}>
-                          One stop Solution for all your financial needs!
+                          We provide One stop Solution for all your financial
+                          needs!
                         </Typography>
                       </Box>
                       <div>
@@ -135,13 +135,26 @@ function HeadSection(props) {
                           <Typography
                             variant={isWidthUp("lg", width) ? "h6" : "body1"}
                             color="textSecondary"
+                            style={{ textAlign: "justify" }}
                           >
-                            We at {appConfig.appName} Finserv LLP with our
+                            We at {appConfig.appName} Services LLP with our
                             expertise in financial domain along with execution
                             capabilities operate as an independent advisor to
                             Mid size and Emerging corporates by developing and
-                            executing customised solutions to achieve their
-                            financial objectives.
+                            executing customised solutions to help them achieve
+                            their financial objectives.
+                          </Typography>
+                          <br />
+                          <Typography
+                            variant={isWidthUp("lg", width) ? "h6" : "body1"}
+                            color="textSecondary"
+                            style={{ textAlign: "justify" }}
+                          >
+                            We provide various advisory services such as Debt
+                            Syndication, Project Financing, Working Capital
+                            Financing, Retail Loans, Credit Rating Advisory, Tax
+                            Advisory, Book-keeping services and Business and
+                            Management Support Services.
                           </Typography>
                           <br />
                           <Typography
@@ -162,15 +175,15 @@ function HeadSection(props) {
                       </div>
                     </Box>
                   </Grid>
-                  <Hidden smDown>
-                    <Grid item md={6}>
-                      <ZoomImage
-                        src={`${process.env.PUBLIC_URL}/images/T-finance-photo-2.jpeg`}
-                        className={classes.image}
-                        alt="header example"
-                      />
-                    </Grid>
-                  </Hidden>
+                  {/*<Hidden smDown>*/}
+                  <Grid item md={6}>
+                    <ZoomImage
+                      src={`${process.env.PUBLIC_URL}/images/T-finance-photo-2.jpeg`}
+                      className={classes.image}
+                      alt="header example"
+                    />
+                  </Grid>
+                  {/*</Hidden>*/}
                 </Box>
               </div>
             </Card>

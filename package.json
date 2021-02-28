@@ -2,7 +2,7 @@
   "name": "money-mentor-fs-ui",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://money-mentor-fs.github.io/money-mentor-fs-ui",
+  "homepage": "https://moneymentorfs.com",
   "dependencies": {
     "@date-io/date-fns": "^2.10.8",
     "@fortawesome/fontawesome-free": "^5.15.2",

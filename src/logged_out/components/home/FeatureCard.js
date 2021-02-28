@@ -54,7 +54,14 @@ function FeatureCard(props) {
       <Typography variant="h5" paragraph>
         {headline}
       </Typography>
-      <Typography variant="body1" color="textSecondary">
+      <Typography
+        variant="body1"
+        color="textSecondary"
+        style={{ textAlign: "justify" }}
+        className={
+          "text-align-center align-items-center justify-content-center d-flex flex-row"
+        }
+      >
         {text}
       </Typography>
     </Fragment>
