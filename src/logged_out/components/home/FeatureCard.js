@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { Typography, withStyles } from "@material-ui/core";
 
+import { Accordion, Button } from "react-bootstrap";
+
 const styles = (theme) => ({
   iconWrapper: {
     borderRadius: theme.shape.borderRadius,
@@ -51,19 +53,25 @@ function FeatureCard(props) {
       >
         {/*{Icon}*/}
       </div>
-      <Typography variant="h5" paragraph>
-        {headline}
-      </Typography>
-      <Typography
-        variant="body1"
-        color="textSecondary"
-        style={{ textAlign: "justify" }}
-        className={
-          "text-align-center align-items-center justify-content-center d-flex flex-row"
-        }
-      >
-        {text}
-      </Typography>
+      <Accordion>
+        <Accordion.Toggle variant="link" eventKey="0" as={Button}>
+          <Typography variant="h5" paragraph>
+            {headline}
+          </Typography>
+        </Accordion.Toggle>
+        <Accordion.Collapse eventKey="0">
+          <Typography
+            variant="h5"
+            color="textSecondary"
+            style={{ textAlign: "justify" }}
+            className={
+              "text-align-center align-items-center justify-content-center d-flex flex-row"
+            }
+          >
+            {text}
+          </Typography>
+        </Accordion.Collapse>
+      </Accordion>
     </Fragment>
   );
 }

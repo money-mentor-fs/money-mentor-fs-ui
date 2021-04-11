@@ -1,11 +1,25 @@
-import React, {memo} from "react";
+import React, { memo } from "react";
 import PropTypes from "prop-types";
-import {Link} from "react-router-dom";
-import {AppBar, Button, Hidden, IconButton, Toolbar, Typography, withStyles,} from "@material-ui/core";
+import { Link } from "react-router-dom";
+import {
+  AppBar,
+  Button,
+  Hidden,
+  IconButton,
+  Toolbar,
+  Typography,
+  withStyles,
+} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
-import {toAbsoluteUrl} from "../../../app/utils/UtilMethods";
+import {
+  scrollToAboutUs,
+  scrollToHome,
+  scrollToServices,
+  toAbsoluteUrl,
+} from "../../../app/utils/UtilMethods";
+import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
 
 const styles = (theme) => ({
   appBar: {
@@ -45,7 +59,25 @@ function NavBar(props) {
       link: "/home",
       name: "Home",
       icon: <HomeIcon className="text-white" />,
+      onClick: () => {
+        scrollToHome();
+      },
     },
+    {
+      name: "Services",
+      icon: <HomeIcon className="text-white" />,
+      onClick: () => {
+        scrollToServices();
+      },
+    },
+    {
+      name: "Our Team",
+      icon: <PeopleAltIcon className="text-white" />,
+      onClick: () => {
+        scrollToAboutUs();
+      },
+    },
+
     // { link: "/home", name: "About Us" },
     // { link: "/home", name: "Services" },
     // { link: "/home", name: "Contact Us" },
@@ -110,6 +142,9 @@ function NavBar(props) {
                         color="secondary"
                         size="large"
                         classes={{ text: classes.menuButtonText }}
+                        onClick={() => {
+                          element?.onClick();
+                        }}
                       >
                         {element.name}
                       </Button>

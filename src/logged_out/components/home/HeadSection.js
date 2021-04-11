@@ -6,12 +6,12 @@ import {
   Card,
   Grid,
   isWidthUp,
+  Toolbar,
   Typography,
   withStyles,
   withWidth,
 } from "@material-ui/core";
 import WaveBorder from "../../../shared/components/WaveBorder";
-import { appConfig } from "../../../app/configs/appConfigs";
 import ZoomImage from "../../../shared/components/ZoomImage";
 
 const styles = (theme) => ({
@@ -102,9 +102,13 @@ function HeadSection(props) {
   const { classes, theme, width } = props;
   return (
     <Fragment>
-      <div className={classNames("lg-p-top", classes.wrapper)}>
+      <Toolbar id="back-to-home" />
+      <div className={classNames("sm-p-top", classes.wrapper)}>
         <div className={classNames("container-fluid", classes.container)}>
           <Box display="flex" justifyContent="center" className="row">
+            <Typography variant={"h3"} className={"text-white mb-3 ml-3 mr-3"}>
+              Money Mentor Financial Services LLP
+            </Typography>
             <Card
               className={classes.card}
               data-aos-delay="200"
@@ -120,29 +124,30 @@ function HeadSection(props) {
                       height="100%"
                     >
                       <Box mb={4}>
-                        {/*<Typography*/}
-                        {/*  variant={isWidthUp("lg", width) ? "h3" : "h4"}*/}
-                        {/*>*/}
-                        {/*  {appConfig.appName}*/}
-                        {/*</Typography>*/}
                         <Typography variant={"h5"}>
-                          We provide One stop Solution for all your financial
-                          needs!
+                          One stop Solution for all your financial needs!
                         </Typography>
                       </Box>
                       <div>
+                        <Typography
+                          variant={"h5"}
+                          style={{
+                            textDecoration: "underline",
+                          }}
+                        >
+                          About Us:
+                        </Typography>
                         <Box mb={2}>
                           <Typography
                             variant={isWidthUp("lg", width) ? "h6" : "body1"}
                             color="textSecondary"
                             style={{ textAlign: "justify" }}
                           >
-                            We at {appConfig.appName} Services LLP with our
-                            expertise in financial domain along with execution
-                            capabilities operate as an independent advisor to
-                            Mid size and Emerging corporates by developing and
-                            executing customised solutions to help them achieve
-                            their financial objectives.
+                            We at MMFS with our expertise in financial domain
+                            along with execution capabilities operate as an
+                            independent advisor to Mid size and Emerging
+                            corporates by developing and executing customised
+                            solutions to help them achieve their objectives.
                           </Typography>
                           <br />
                           <Typography
@@ -153,15 +158,18 @@ function HeadSection(props) {
                             We provide various advisory services such as Debt
                             Syndication, Project Financing, Working Capital
                             Financing, Retail Loans, Credit Rating Advisory, Tax
-                            Advisory, Book-keeping services and Business and
-                            Management Support Services.
+                            Advisory, Book-keeping services, Tax Advisory
+                            services and Business and Management Consultancy
+                            Services.
                           </Typography>
                           <br />
+                          <Typography variant={"h5"}>
+                            <strong>Mission and Vision:</strong>
+                          </Typography>
                           <Typography
                             variant={isWidthUp("lg", width) ? "h6" : "body1"}
                             color="textSecondary"
                           >
-                            Mission and Vision
                             <ul>
                               <li>
                                 Committed to High-quality Financial Solutions

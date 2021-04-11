@@ -1,11 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Grid, isWidthUp, Typography, withWidth } from "@material-ui/core";
+import {
+  Grid,
+  isWidthUp,
+  Toolbar,
+  Typography,
+  withStyles,
+  withWidth,
+} from "@material-ui/core";
 import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 import calculateSpacing from "./calculateSpacing";
 import FeatureCard from "./FeatureCard";
+import WaveBorder from "../../../shared/components/WaveBorder";
 
 const iconSize = 30;
+
+const styles = (theme) => ({
+  waveBorder: {
+    paddingTop: theme.spacing(4),
+  },
+});
 
 const features = [
   {
@@ -91,38 +105,48 @@ const features = [
 ];
 
 function FeatureSection(props) {
-  const { width } = props;
+  const { width, classes = {} } = props;
   return (
-    <div style={{ backgroundColor: "#FFFFFF" }}>
-      <div className="container-fluid lg-p-top">
-        <Typography variant="h3" align="center" className="lg-mg-bottom">
-          Services
-        </Typography>
-        <div className="container-fluid">
-          <Grid container spacing={calculateSpacing(width)}>
-            {features.map((element) => (
-              <Grid
-                item
-                xs={6}
-                md={6}
-                data-aos="zoom-in-up"
-                data-aos-delay={
-                  isWidthUp("md", width) ? element.mdDelay : element.smDelay
-                }
-                key={element.headline}
-              >
-                <FeatureCard
-                  Icon={element.icon}
-                  color={element.color}
-                  headline={element.headline}
-                  text={element.text}
-                />
-              </Grid>
-            ))}
-          </Grid>
+    <>
+      <div style={{ backgroundColor: "#FFFFFF" }}>
+        <div className="container-fluid lg-p-top">
+          <Toolbar id="back-to-services" />
+          <Typography variant="h3" align="center" className="lg-mg-bottom">
+            Services
+          </Typography>
+          <div className="container-fluid">
+            <Grid container spacing={calculateSpacing(width)}>
+              {features.map((element) => (
+                <Grid
+                  item
+                  xs={6}
+                  md={6}
+                  data-aos="zoom-in-up"
+                  data-aos-delay={
+                    isWidthUp("md", width) ? element.mdDelay : element.smDelay
+                  }
+                  key={element.headline}
+                >
+                  <FeatureCard
+                    Icon={element.icon}
+                    color={element.color}
+                    headline={element.headline}
+                    text={element.text}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </div>
         </div>
       </div>
-    </div>
+      <WaveBorder
+        // upperColor={"#6784b3"}
+        upperColor={"#476d70"}
+        lowerColor="#FFFFFF"
+        className={classes.waveBorder}
+        animationNegativeDelay={2}
+      />
+    </>
   );
 }
 
@@ -130,4 +154,6 @@ FeatureSection.propTypes = {
   width: PropTypes.string.isRequired,
 };
 
-export default withWidth()(FeatureSection);
+export default withWidth()(
+  withStyles(styles, { withTheme: true })(FeatureSection)
+);

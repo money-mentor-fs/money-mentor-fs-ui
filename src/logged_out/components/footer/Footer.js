@@ -1,10 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {Box, Grid, Hidden, IconButton, isWidthUp, Typography, withStyles, withWidth,} from "@material-ui/core";
+import {
+  Box,
+  Grid,
+  Hidden,
+  IconButton,
+  isWidthUp,
+  Typography,
+  withStyles,
+  withWidth,
+} from "@material-ui/core";
 import MailIcon from "@material-ui/icons/Mail";
 import WaveBorder from "../../../shared/components/WaveBorder";
 import transitions from "@material-ui/core/styles/transitions";
-import {appConfig} from "../../../app/configs/appConfigs";
+import { appConfig } from "../../../app/configs/appConfigs";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 
@@ -262,49 +271,76 @@ function Footer(props) {
           </Grid>
           <Hidden mdDown>
             <Grid item xs={12} md={6} lg={4}>
-              <Box display="flex" justifyContent="center">
-                <div>
-                  {infos.map((info, index) => (
-                    <Box display="flex" mb={1} key={index}>
-                      <Box mr={2}>
-                        <IconButton
-                          className={classes.infoIcon}
-                          tabIndex={-1}
-                          disabled
-                        >
-                          {info.icon}
-                        </IconButton>
-                      </Box>
-                      <Box
-                        display="flex"
-                        flexDirection="column"
-                        justifyContent="center"
-                      >
-                        <Typography variant="h6" className="text-white">
-                          {info.description}
-                        </Typography>
-                      </Box>
-                    </Box>
-                  ))}
-                </div>
-              </Box>
+              {/*<Box display="flex" justifyContent="center">*/}
+              {/*  <div>*/}
+              {/*    {infos.map((info, index) => (*/}
+              {/*      <Box display="flex" mb={1} key={index}>*/}
+              {/*        <Box mr={2}>*/}
+              {/*          <IconButton*/}
+              {/*            className={classes.infoIcon}*/}
+              {/*            tabIndex={-1}*/}
+              {/*            disabled*/}
+              {/*          >*/}
+              {/*            {info.icon}*/}
+              {/*          </IconButton>*/}
+              {/*        </Box>*/}
+              {/*        <Box*/}
+              {/*          display="flex"*/}
+              {/*          flexDirection="column"*/}
+              {/*          justifyContent="center"*/}
+              {/*        >*/}
+              {/*          <Typography variant="h6" className="text-white">*/}
+              {/*            {info.description}*/}
+              {/*          </Typography>*/}
+              {/*        </Box>*/}
+              {/*      </Box>*/}
+              {/*    ))}*/}
+              {/*  </div>*/}
+              {/*</Box>*/}
             </Grid>
           </Hidden>
           <Grid item xs={12} md={6} lg={4}>
-            <Typography variant="h6" paragraph className="text-white">
-              About Us
-            </Typography>
-            <Typography
-              style={{ color: "#8f9296" }}
-              paragraph
-              className="text-white"
-            >
-              We at {appConfig.appName} Finserv LLP with our expertise in
-              financial domain along with execution capabilities operate as an
-              independent advisor to Mid size and Emerging corporates by
-              developing and executing customised solutions to achieve their
-              financial objectives.
-            </Typography>
+            {/*<Typography variant="h6" paragraph className="text-white">*/}
+            {/*  About Us*/}
+            {/*</Typography>*/}
+            {/*<Typography*/}
+            {/*  style={{ color: "#8f9296" }}*/}
+            {/*  paragraph*/}
+            {/*  className="text-white"*/}
+            {/*>*/}
+            {/*  We at {appConfig.appName} Finserv LLP with our expertise in*/}
+            {/*  financial domain along with execution capabilities operate as an*/}
+            {/*  independent advisor to Mid size and Emerging corporates by*/}
+            {/*  developing and executing customised solutions to achieve their*/}
+            {/*  financial objectives.*/}
+            {/*</Typography>*/}
+            <Grid item xs={12} md={6} lg={4}>
+              <Box display="flex">
+                <div>
+                  <Box display="flex" mb={1}>
+                    <Box mr={2}>
+                      <IconButton
+                        className={classes.infoIcon}
+                        tabIndex={-1}
+                        disabled
+                      >
+                        <MailIcon />
+                      </IconButton>
+                    </Box>
+                    <Box
+                      display="flex"
+                      flexDirection="column"
+                      justifyContent="center"
+                    >
+                      <Typography variant="h6" className="text-white">
+                        credit@moneymentorfs.com
+                      </Typography>
+                    </Box>
+                  </Box>
+                </div>
+              </Box>
+            </Grid>
+
             <Box display="flex">
               {appConfig.isFooterSocialIconsEnable &&
                 socialIcons.map((socialIcon, index) => (
