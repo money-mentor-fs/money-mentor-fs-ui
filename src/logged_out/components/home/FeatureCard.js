@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
+import React, {Fragment} from "react";
 import PropTypes from "prop-types";
-import { Typography, withStyles } from "@material-ui/core";
+import {Typography, withStyles} from "@material-ui/core";
 
-import { Accordion, Button } from "react-bootstrap";
+import {Accordion, Button} from "react-bootstrap";
 
 const styles = (theme) => ({
   iconWrapper: {
@@ -42,17 +42,6 @@ function FeatureCard(props) {
   const { classes, Icon, color, headline, text } = props;
   return (
     <Fragment>
-      <div
-        // We will set color and fill here, due to some prios complications
-        className={classes.iconWrapper}
-        style={{
-          color: color,
-          backgroundColor: shadeColor(color, 0.5),
-          fill: color,
-        }}
-      >
-        {/*{Icon}*/}
-      </div>
       <Accordion>
         <Accordion.Toggle variant="link" eventKey="0" as={Button}>
           <Typography variant="h5" paragraph>

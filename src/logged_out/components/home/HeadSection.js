@@ -38,8 +38,8 @@ const styles = (theme) => ({
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
     [theme.breakpoints.up("xs")]: {
-      paddingTop: theme.spacing(3),
-      paddingBottom: theme.spacing(3),
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(2),
     },
     [theme.breakpoints.up("sm")]: {
       paddingTop: theme.spacing(5),
@@ -67,7 +67,7 @@ const styles = (theme) => ({
     position: "relative",
     // backgroundColor: "#91afdc",
     backgroundColor: "#3b77a1",
-    paddingBottom: theme.spacing(2),
+    paddingBottom: theme.spacing(0.5),
   },
   image: {
     maxWidth: "100%",
@@ -76,16 +76,16 @@ const styles = (theme) => ({
     boxShadow: theme.shadows[4],
   },
   container: {
-    marginTop: theme.spacing(6),
-    marginBottom: theme.spacing(12),
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(6),
     [theme.breakpoints.down("md")]: {
-      marginBottom: theme.spacing(9),
-    },
-    [theme.breakpoints.down("sm")]: {
-      marginBottom: theme.spacing(6),
+      marginBottom: theme.spacing(4),
     },
     [theme.breakpoints.down("sm")]: {
       marginBottom: theme.spacing(3),
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: theme.spacing(1.5),
     },
   },
   containerFix: {

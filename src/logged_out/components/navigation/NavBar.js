@@ -15,11 +15,13 @@ import HomeIcon from "@material-ui/icons/Home";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
 import {
   scrollToAboutUs,
+  scrollToContactUs,
   scrollToHome,
   scrollToServices,
   toAbsoluteUrl,
 } from "../../../app/utils/UtilMethods";
 import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
+import CallIcon from "@material-ui/icons/Call";
 
 const styles = (theme) => ({
   appBar: {
@@ -77,6 +79,13 @@ function NavBar(props) {
         scrollToAboutUs();
       },
     },
+    {
+      name: "Contact Us",
+      icon: <CallIcon className="text-white" />,
+      onClick: () => {
+        scrollToContactUs();
+      },
+    },
 
     // { link: "/home", name: "About Us" },
     // { link: "/home", name: "Services" },
@@ -95,7 +104,7 @@ function NavBar(props) {
             <img
               src={toAbsoluteUrl("/images/Money_Mentor_Small.jpg")}
               alt={"Money Mentor Fs Logo"}
-              style={{ height: "75px", width: "120px" }}
+              style={{ height: "75px", width: "210px" }}
             />
           )}
           {!isImage && (
@@ -141,7 +150,10 @@ function NavBar(props) {
                       <Button
                         color="secondary"
                         size="large"
-                        classes={{ text: classes.menuButtonText }}
+                        classes={{
+                          text: classes.menuButtonText,
+                        }}
+                        style={{ color: "#3b77a1" }}
                         onClick={() => {
                           element?.onClick();
                         }}
@@ -157,6 +169,7 @@ function NavBar(props) {
                     size="large"
                     onClick={element.onClick}
                     classes={{ text: classes.menuButtonText }}
+                    style={{ color: "#3b77a1" }}
                     key={element.name}
                   >
                     {element.name}

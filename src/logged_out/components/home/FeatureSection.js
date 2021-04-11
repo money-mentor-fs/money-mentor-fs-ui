@@ -9,7 +9,6 @@ import {
   withWidth,
 } from "@material-ui/core";
 import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
-import calculateSpacing from "./calculateSpacing";
 import FeatureCard from "./FeatureCard";
 import WaveBorder from "../../../shared/components/WaveBorder";
 
@@ -17,7 +16,8 @@ const iconSize = 30;
 
 const styles = (theme) => ({
   waveBorder: {
-    paddingTop: theme.spacing(4),
+    marginTop: theme.spacing(4),
+    paddingTop: theme.spacing(6),
   },
 });
 
@@ -34,7 +34,8 @@ const features = [
   {
     color: "#6200EA",
     headline: "Debt Syndication",
-    text: "",
+    text:
+      "MMFS acts as an advisor for arranging funds through various types of debt instruments and assists customers in strengthening their balance sheets by delivering capital structure alternatives designed for maximum profits. We at MMFS, build a strong long term relationship with customers by providing them timely and tailored solutions to fulfil their financial goals. MMFS has developed an extensive network of Financial Institutions and banks and built strong relationships with them which enable us to provide customized solutions to the customer requirement. To fulfil all the liquidity needs of the clients, we provide innovative solutions for both fund and non-fund based requirements creating tangible value for the customers. We assist our customers throughout the transaction process from initial strategy formulation to implementation.",
     icon: <CalendarTodayIcon style={{ fontSize: iconSize }} />,
     mdDelay: "200",
     smDelay: "200",
@@ -109,13 +110,13 @@ function FeatureSection(props) {
   return (
     <>
       <div style={{ backgroundColor: "#FFFFFF" }}>
-        <div className="container-fluid lg-p-top">
+        <div className="container-fluid">
           <Toolbar id="back-to-services" />
-          <Typography variant="h3" align="center" className="lg-mg-bottom">
+          <Typography variant="h3" align="center" className="mb-3">
             Services
           </Typography>
           <div className="container-fluid">
-            <Grid container spacing={calculateSpacing(width)}>
+            <Grid container spacing={2}>
               {features.map((element) => (
                 <Grid
                   item

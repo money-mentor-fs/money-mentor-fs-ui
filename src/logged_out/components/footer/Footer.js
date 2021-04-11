@@ -168,7 +168,7 @@ function Footer(props) {
         lowerColor={"#3b77a1"}
         animationNegativeDelay={4}
       />
-      <div className={classes.footerInner}>
+      <div className={classes.footerInner} id={"back-to-contact-us"}>
         <Grid container spacing={isWidthUp("md", width) ? 10 : 5}>
           <Grid item xs={12} md={6} lg={4}>
             <Box display="flex" flexDirection="column">
